@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1015">
+  <meta name="description" content="DevBlog — нотатки про frontend, розробку та інструменти.">
+  <title>DevBlog — Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="DevBlog — на головну">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="m8.5 7-5 5 5 5M15.5 7l5 5-5 5M14 5l-4 14" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span>Dev<span class="brand-accent">Blog</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false"
+        aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Головна навігація">
+        <a class="nav-link is-active" href="#top">Головна</a>
+        <a class="nav-link" href="#articles">Статті</a>
+        <a class="nav-link" href="#stack">Проєкти</a>
+        <a class="nav-link" href="#contact">Про мене</a>
+      </nav>
+
+      <a class="header-contact" href="#contact">Зв’язатись <span aria-hidden="true">✉</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="availability"><span class="status-dot"></span> Відкритий до пропозицій</div>
+        <h1 id="hero-title">Привіт, я<span class="gradient-text">Артем</span><br><span
+            class="gradient-text">Замлілий</span></h1>
+        <p class="hero-description">Пишу про HTML, CSS, JavaScript і те, що дізнаюся у процесі навчання. Ділюсь реальним
+          досвідом — без зайвої теорії.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#articles"><span aria-hidden="true">📝</span> Читати статті</a>
+          <a class="button button-quiet" href="#contact"><span aria-hidden="true">💬</span> Написати мені</a>
+        </div>
+
+        <div class="hero-stats" aria-label="Коротко про досвід">
+          <div class="stat"><strong>24</strong><span>статті</span></div>
+          <div class="stat"><strong>11 міс</strong><span>у розробці</span></div>
+          <div class="stat"><strong>4</strong><span>проєкти</span></div>
+        </div>
+      </div>
+
+      <div class="code-card reveal" aria-label="Коротка інформація про автора у форматі JSON">
+        <div class="code-card-top">
+          <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>about-me.json</span>
+        </div>
+        <div class="code-content">
+          <p class="terminal-command"><span>➜</span> cat about-me.json</p>
+
+          <pre><code>{
+  <span class="code-key">"name"</span>: <span class="code-string">"Артем Замлілий"</span>,
+  <span class="code-key">"role"</span>: <span class="code-string">"Програміст"</span>,
+  <span class="code-key">"stack"</span>: [<span class="code-string">"HTML"</span>, <span class="code-string">"CSS"</span>, <span class="code-string">"JS"</span>],
+  <span class="code-key">"learning"</span>: <span class="code-string">"React + TypeScript"</span>,
+  <span class="code-key">"open_to_work"</span>: <span class="code-bool">true</span>,
+  <span class="code-key">"location"</span>: <span class="code-string">"Київ, Україна 🇺🇦"</span>
+}</code></pre>
+          <p class="terminal-prompt"><span>➜</span> <i></i></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="articles-section container" id="articles" aria-labelledby="articles-title">
+      <div class="section-heading reveal">
+        <h2 id="articles-title">Останні <span class="blue-text">статті</span></h2>
+        <a class="text-link" href="#articles">Всі статті <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="article-grid">
+        <article class="article-card reveal">
+          <a class="article-image art-blue" href="#contact" aria-label="Стаття про Tailwind CSS"><span
+              aria-hidden="true">🎨</span></a>
+          <div class="article-body">
+            <span class="tag tag-blue">CSS</span>
+            <h3><a href="#contact">Як я навчився Tailwind за тиждень і чому не хочу повертатись до CSS</a></h3>
+            <p>Розбираю utility-first підхід на реальному прикладі і пояснюю, чому він змінив мій підхід до верстки.</p>
+            <div class="article-meta"><time datetime="2025-03-14">14 берез. 2025</time><span>8 хв читати</span></div>
+          </div>
+        </article>
+
+        <article class="article-card reveal">
+          <a class="article-image art-amber" href="#contact" aria-label="Стаття про Event Loop"><span
+              aria-hidden="true">⚡</span></a>
+          <div class="article-body">
+            <span class="tag tag-amber">JAVASCRIPT</span>
+            <h3><a href="#contact">Event Loop пояснений на кухонному прикладі</a></h3>
+            <p>Нарешті зрозумів async/await і Promise. Пояснюю так, як сам хотів прочитати рік тому.</p>
+            <div class="article-meta"><time datetime="2025-03-06">6 берез. 2025</time><span>12 хв читати</span></div>
+          </div>
+        </article>
+
+        <article class="article-card reveal">
+          <a class="article-image art-green" href="#contact" aria-label="Стаття про продуктивність сайту"><span
+              aria-hidden="true">🚀</span></a>
+          <div class="article-body">
+            <span class="tag tag-green">PERFORMANCE</span>
+            <h3><a href="#contact">Підняв Lighthouse з 43 до 96 балів за один вечір</a></h3>
+            <p>Конкретні виправлення: fetchpriority, lazy loading, defer і WebP конвертація з реальними цифрами
+              до/після.</p>
+            <div class="article-meta"><time datetime="2025-02-22">22 лют. 2025</time><span>10 хв читати</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="stack-section" id="stack" aria-labelledby="stack-title">
+      <div class="container stack-content">
+        <h2 class="reveal" id="stack-title">Мій <span class="blue-text">стек</span></h2>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3 class="eyebrow">FRONTEND</h3>
+            <div class="skill">
+              <div class="skill-label"><span>HTML5 / Семантика</span><span>90%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-blue" style="--level:90%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>CSS / SCSS</span><span>85%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-blue" style="--level:85%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>JavaScript (ES6+)</span><span>70%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-blue" style="--level:70%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>Bootstrap 5 / Tailwind</span><span>80%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-blue" style="--level:80%"></span></div>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="eyebrow">ІНСТРУМЕНТИ</h3>
+            <div class="skill">
+              <div class="skill-label"><span>Git / GitHub</span><span>75%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-orange" style="--level:75%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>Figma (читаю макети)</span><span>65%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-orange" style="--level:65%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>DevTools / Lighthouse</span><span>78%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-orange" style="--level:78%"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-label"><span>Вчу: React</span><span>30%</span></div>
+              <div class="skill-track"><span class="skill-fill fill-orange" style="--level:30%"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="toolset reveal">
+          <h3 class="eyebrow">ТЕХНОЛОГІЇ</h3>
+          <ul class="chip-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>SCSS</li>
+            <li>JavaScript</li>
+            <li>Bootstrap 5</li>
+            <li>Tailwind CSS</li>
+            <li>AOS</li>
+            <li>Lottie</li>
+            <li>Git</li>
+            <li>GitHub Pages</li>
+            <li>Figma</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section container" id="contact" aria-labelledby="contact-title">
+      <h2 class="reveal" id="contact-title">Написати <span class="blue-text">мені</span></h2>
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <h3>Відкритий до співпраці</h3>
+          <p>Шукаю стажування або першу роботу у веб-розробці. Також радо відповідаю на питання про навчання і перший
+            досвід у професії.</p>
+          <!-- PERSONAL DATA: замініть посилання, назви профілів і email на свої -->
+          <ul class="social-list">
+            <li><a href="https://github.com/ArtTim7911" target="_blank" rel="noreferrer"><span
+                  class="social-icon social-github" aria-hidden="true">🐙</span><span>github.com/ArtTim7911</span><span
+                  class="external-arrow" aria-hidden="true">↗</span></a></li>
+            <!-- <li><a href="https://linkedin.com/in/oleksiy" target="_blank" rel="noreferrer"><span
+                  class="social-icon social-linkedin"
+                  aria-hidden="true">▣</span><span>linkedin.com/in/oleksiy</span><span class="external-arrow"
+                  aria-hidden="true">↗</span></a></li> У МЕНЕ НЕМАЄ ЦІЄЇ СОЦ. МЕРЕЖІ -->
+            <li><a href="https://t.me/ArtTim7911" target="_blank" rel="noreferrer"><span
+                  class="social-icon social-telegram" aria-hidden="true">➤</span><span>@ArtTim7911</span><span
+                  class="external-arrow" aria-hidden="true">↗</span></a></li>
+            <li><a href="mailto:youarttube@gmail.com"><span class="social-icon social-email"
+                  aria-hidden="true">✉</span><span>youarttube@gmail.com</span><span class="external-arrow"
+                  aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" data-recipient="youarttube@gmail.com">
+          <div class="form-row">
+            <label>Ім’я<input name="name" autocomplete="name" placeholder="Твоє ім’я" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" placeholder="email@example.com"
+                required></label>
+          </div>
+          <label>Тема<input name="subject" placeholder="Про що хочеш написати?" required></label>
+          <label>Повідомлення<textarea name="message" rows="4" placeholder="Напиши тут..." required></textarea></label>
+          <button class="button button-primary submit-button" type="submit">Надіслати повідомлення <span
+              aria-hidden="true">→</span></button>
+          <p class="form-note" id="form-note" aria-live="polite">Повідомлення відкриється у вашій поштовій програмі.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 DevBlog · Зроблено з <span class="heart" aria-label="любов’ю">♥</span> і VS Code</p>
+      <nav aria-label="Навігація у футері"><a href="#top">Головна</a><a href="#articles">Статті</a><a
+          href="https://github.com/ArtTim7911" target="_blank" rel="noreferrer">GitHub</a></nav>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Відкрити меню' : 'Закрити меню');
+      mainNav.classList.toggle('is-open', !isOpen);
+    });
+
+    mainNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        mainNav.classList.remove('is-open');
+      });
+    });
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    }
+
+    document.querySelector('#contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const fields = new FormData(form);
+      const subject = encodeURIComponent(fields.get('subject'));
+      const body = encodeURIComponent(`Від: ${fields.get('name')} (${fields.get('email')})\n\n${fields.get('message')}`);
+      window.location.href = `mailto:${form.dataset.recipient}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+
+</html>
